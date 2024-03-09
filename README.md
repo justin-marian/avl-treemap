@@ -2,7 +2,7 @@
 
 ## Description
 
-This library offers an accessible and straightforward API, making it simple to manage **AVL trees**, **encrypt** and **decrypt data**, and conduct **range-based queries**. Each module **Tree, Cipher, and Range** is designed with user-friendliness in mind, providing clear functions for complex operations.
+This API simplifies the management of**AVL trees**, **encrypt** and **decrypt data**, as well as conducting **range-based queries**. Each module - **Tree, Cipher, and Range** - is designed with user-friendliness in mind, providing clear functions for complex operations.
 
 ## Tree Module
 
@@ -10,20 +10,19 @@ The Tree module is the core of the AVL Treemap library, focusing on providing ro
 
 | Function | Description |
 |:--------:|------------|
-| `createTree` | Initializes a new AVL tree. It requires function pointers for creating, deleting, and comparing both elements and values, allowing for customized data handling within the tree. |
-| `destroyTree` | Frees all memory associated with the tree, including all its nodes and any data attached to them. Ensures that no memory leaks occur when a tree is no longer needed. |
-| `createTreeNode` | Creates a new tree node with a specified element and value. allocates memory for a new node and initializes it with the given parameters. |
-| `destroyTreeNode` | Deletes a specific node from the tree and frees the memory associated with its element and value. It ensures the tree's integrity by properly reconnecting any child nodes to maintain the AVL balance property. |
-| `isEmpty` | Checks if the tree contains no nodes. It returns true if the tree is empty, providing a quick way to check the tree's status. |
-| `search` | Searches for a node with a specific element, starting from the provided root node. It returns the node if found, offering an efficient way to locate data in the tree. |
-| `minimum` | Finds the node with the smallest element in the tree. It returns minimum value, such as range queries. |
-| `maximum` | Identifies the node with the largest element in the tree. Similar to `minimum`, but for finding the maximum value, aiding in range-based operations. |
-| `successor` `predecessor`  | Determines the successor of a given node, which is the node with the next-highest value, and for the predecessor of a given node is the next-lowest value. |
-| `insertNode` | Inserts a new node with the specified element and value into the tree. This function maintains the AVL balance through rotations if necessary, ensuring optimal tree height. |
-| `deleteNode` | Removes a node with a specific element from the tree. It handles the re-balancing of the tree to preserve the AVL property after deletion. |
-| `updateHeight` | Recalculates and updates the height of a given node. This is crucial for maintaining the balance of the tree, as it affects the balance factor calculation. |
-| `getBalanceTree` | Calculates the balance factor of a node, which is the difference in height between its left and right subtrees. This information is used to decide when and how to rotate the tree to maintain its balance. |
-| `avlRotateLeft` `avlRotateRight` | These functions perform left and right rotations on a specified node. Rotations are a critical part of maintaining the AVL tree's balance, ensuring that operations remain efficient. |
+| `createTree` | Initializes a new AVL tree. It requires function pointers for **creating**, **deleting**, **comparing** both elements and values, and data handling within the tree. |
+| `destroyTree` | Frees all memory associated with the tree, including **all its nodes** and **any data attached** to them. |
+| `createTreeNode` | Creates a **new tree node** with a specified **element** and **value**. Allocates memory for a new node and initializes it with the given parameters. |
+| `destroyTreeNode` | Deletes a specific **node** from the tree and **frees the memory** associated with its **element** and **value**. It ensures the tree's integrity by *properly reconnecting any child nodes* to maintain the **AVL balance property**. |
+| `isEmpty` | Checks if the tree **contains no nodes**. It returns `true` if the tree is empty. |
+| `search` | Searches for a **node** with a specific **element**, starting from the provided **root** node. It returns the **node**. |
+| `minimum` `maximum` | Finds the node with the **smallest element** in the tree. Similar to `minimum`, but for finding the **maximum value**, aiding in range-based operations. |
+| `successor` `predecessor`  | Determines the **successor** of a given **node**, which is the node with the next-highest value, and for the predecessor of a given node is the next-lowest value. |
+| `insertNode` | Inserts a **new node** with the specified **element** and **value** into the tree. *Maintains the AVL balance* through **rotations** if necessary, ensuring *optimal tree height*. |
+| `deleteNode` | Removes a **node** with a specific **element** from the tree. It handles the **re-balancing** of the tree to *preserve the AVL property* after deletion. |
+| `updateHeight` | Recalculates and updates the **height** of a given node. *Maintaining the balance of the tree*, as it affects the balance factor calculation. |
+| `getBalanceTree` | Calculates the **balance factor** of a **node**, which is the *difference in height between its left and right subtrees*. Used to decide when and how to rotate the tree to *maintain its balance*. |
+| `avlRotateLeft` `avlRotateRight` | These functions perform **left** and **right** *rotations* on a specified **node**. *Maintaining the AVL tree's balance*, ensuring that operations remain efficient. |
 
 ## Cipher Module
 
