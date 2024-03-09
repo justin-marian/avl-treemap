@@ -278,8 +278,8 @@ void processLine(Tree *tree, const char *line, int *offset) {
     char *lineCopy = strdup(line);
 
     if (!lineCopy) {
-        // Handle memory allocation error.
-        printf("Error at strdup...\n");
+        // Handle memory allocation [ERR]:.
+        printf("[ERR]: at strdup...\n");
         exit(EXIT_FAILURE);
     }
 
@@ -314,9 +314,9 @@ Range* createRange(void) {
         range->size = 0;
         range->capacity = INIT_LEN;
         range->index = malloc(sizeof(*range->index) * range->capacity);
-        // Handle error reallocation.
+        // Handle [ERR]: reallocation.
         if (!range->index) {
-            printf("Error at malloc...\n");
+            printf("[ERR]: at malloc...\n");
             exit(EXIT_FAILURE);
         }
     }
@@ -334,9 +334,9 @@ void expandRangeIndex(Range* range) {
     // Double capacity size and reallocate range size.
     range->capacity *= 2;
     range->index = realloc(range->index, sizeof(*range->index) * range->capacity);
-    // Handle error reallocation.
+    // Handle [ERR]: reallocation.
     if (!range->index) {
-        printf("Error at realloc...\n");
+        printf("[ERR]: at realloc...\n");
         exit(EXIT_FAILURE);
     }
 }

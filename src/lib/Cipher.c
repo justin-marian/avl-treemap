@@ -16,9 +16,9 @@ void buildTreeFromFile(const char *file, Tree *tree) {
     }
 
     FILE *fin = fopen(file, "r");
-    // Handle error file opening.
+    // Handle [ERR]: file opening.
     if (!fin) {
-        printf("Error opening the file for reading.\n");
+        printf("[ERR]: opening the file for reading.\n");
         return;
     }
 
@@ -46,13 +46,13 @@ void buildTreeFromFile(const char *file, Tree *tree) {
 void processFile(const char *infile, const char *outfile, Range *elem, int method) {
     FILE *fin = fopen(infile, "r");
     FILE *fout = fopen(outfile, "w");
-    // Handle error files opening.
+    // Handle [ERR]: files opening.
     if (!fin) {
-        printf("Error opening input file.\n");
+        printf("[ERR]: opening input file.\n");
         return;
     }
     if (!fout) {
-        printf("Error opening output file.\n");
+        printf("[ERR]: opening output file.\n");
         fclose(fin);
         return;
     }
@@ -105,7 +105,7 @@ void decrypt(const char *infile, const char *outfile, Range *elem) {
  */
 void printKey(const char * file, Range *elem) {
 	FILE *fin = fopen(file, "w");
-    // Handle error files opening.
+    // Handle [ERR]: files opening.
 	if (!elem) {
 		fprintf(fin, "No element provided!\n");
 		fclose(fin);
